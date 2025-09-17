@@ -1,0 +1,17 @@
+Schema of Online Food Delivery System
+System_User(id, username, email, password, first_name, last_name, user_group, reg_Date)
+System_User_phoneNumbers (id, phone_number)
+Customer(id, name, sys_user_id)
+System_Admin(admin_id, name, admin_mail, contact01, contact02)
+Customer_message(id, sent_time, email, message, reply_message, admin_id, cust_id)
+Customer_message_phone Numbers (id, phone number)
+Order(order_id, quantity, price, cust_id, Delivery_info_id)
+Food_Restaurants(id, food_name, restaurant_name, price, food_id, restaurant_id)
+contains(order id, food Res id)
+Food_items(food_id, name, price, add_date, description)
+Restaurants(restaurant_id, name, reg_date, description)
+Delivery_info(id, name, total_quantity, total_price, destination_address, delivery_agent_info,
+required_time, delivery_status, confirmation_date, payment_id)
+Delivery_phone Numbers(id, phone number)
+Payment_gateway (payment_id, total_amount_to_be_paid, payment_status, payment_date)
+Payment_gateway_Methods(payment_id, payment_method)
